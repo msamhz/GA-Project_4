@@ -43,12 +43,12 @@ In favour of reducing human fatalities and the possiibility of an uncontained ou
 **Key Observatiions from Exploratory Data Analysis**
 1) The number of WNV present traps across years vary greatly. Within each year there appears to be a seasonal peak in WNV in August.
 
-In 2007 and 2013, we can see the similar trend.
+`In **2007** and **2013**, we can see the similar trend.`
 
 ![wnvpresent_trend_2007](https://user-images.githubusercontent.com/98629542/164116210-77635c05-e616-4909-858d-1083057d725e.png)
 ![wnvpresent_trend_2013](https://user-images.githubusercontent.com/98629542/164116272-df55c8ab-5fd9-430e-81ec-a78ad79b8e8c.png)
 
-On the other hand, in 2009 and 2011, we see different but similar trend as well 
+`On the other hand, in **2009** and **2011**, we see different but similar trend as well`
 
 ![wnvpresent_trend_2009](https://user-images.githubusercontent.com/98629542/164116304-43c0a2a2-d7bd-47e7-b0c6-00ef47122346.png)
 ![wnvpresent_trend_2011](https://user-images.githubusercontent.com/98629542/164116310-09a9294c-f00f-4154-9440-540abdfbbd8a.png)
