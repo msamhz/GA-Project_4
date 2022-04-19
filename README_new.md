@@ -62,8 +62,33 @@ An interesting feature that was highlighted was the week 29 and 30, which was hi
 
 ## Cost Benefit Analysis
 
+With the provided spray data, the average area sprayed is approximately 2864 acres. 
+Using 67¢ / acre. [Source](https://www.centralmosquitocontrol.com/-/media/files/centralmosquitocontrol-na/us/resources-lit%20files/zenivex%20cost%20comparison%20fact%20sheet.pdf), the cost of spray is calculated to be $13,002 per spraying session.
+
+From [NCBI](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3322011/) data, out of 163 cases, 117(71.8\%) was diagonsed as the less severe West Nile Fever (WNF), while 46(28.2\%) was diagonsed as the more severe West Nile Neuroinvasive Disease (WNND). The average medical cost of WNND and WNF is estimated to be approximately \\$46,000 and \\$167 respectively.
+
+<img src="../Pictures/XGBoost_Confusion_Matrix.png" style='float:left'>
+With the assumption that the confusion matrix is the predicted data for a given year, and using the cost of spraying and the associated medical costs above, we calulated the estimated cost of 3 options.
+
+|Options|1: Spray All WNV|2: Spray with Average Rate|3: No Spraying|
+|---|---|---|---|
+|Spraying Cost|\\$9,894,560.05|\\$403,063.55|\\$0|
+|Medical Cost|\\$25,120.13|\\$162,705.95|\\$168,452.66|
+|Total expected Cost|\\$9,919,680.18|\\$565,768.5|\\$168,452.66|
+
+Although the expected cost of not spraying is the lowest amongst the three options. This is only looking at the monetary costs of the west nile virus infection. There are other intangible costs and benefits which we are unable to calculate, such as fatalities, discomfort of infected patients, productivity losses for infected patients.
+
+Hence, it is not beneficial to choose to not spray.
+
+Our recommendation currently would be to choose option 2 to spray at the average rate as we want to reduce fatalities and potential hotspot.
+
 
 ## Conclusions and Recommendations
 
+Assuming the mixed species has both restuans and pipiens,  the model is expected to perform better if distinguished well. As such, we recommend taking extra time to ensure that the species are properly identified. 
+
+While the inclusion of trap locations are sufficient leaving out the rare wnv cases, we suggest for future models to model location clusters as hotspots rather than specific traps to better capture high risk areas. 
+
+The model currently is effective at picking out WNV presence at the peak of the wave rather than the start and of the wave. We recommend to build future models to be more sensitive to the onset of the WNV wave as that would be the best time to tackle the issue 
 
 
