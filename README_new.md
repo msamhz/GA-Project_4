@@ -18,6 +18,10 @@ In favour of reducing human fatalities and the possiibility of an uncontained ou
 ## Method
 **1) Data Cleaning and Exploratory Data Analysis**
 - Understand the data in the train, test, spray and weather datasets
+- Weather datasets were split by two weather stations, hence we calculated the euclidian distance between weather stations and traps and attributed the weather conditions to it as shown below. 
+
+![Nearest Traps around weather stations](https://user-images.githubusercontent.com/98629542/164117440-f4c92dfa-b0b7-4ecf-a9e0-dbbbdbaa4779.png)
+
 - Perform data cleaning and extract essential features for further analysis
 - Plot distributions locations of WNV across the years
 - Merge required data for subsequent analysis 
@@ -73,6 +77,16 @@ There are some traps that are rated higher importance than the rest, which corre
 An interesting feature that was highlighted was the week 29 and 30, which was highlighted as the highest amongst the rest of the weeks. Based on our initial EDA, we can see that these two weeks were seeing a start of wnv influx across all the years as shown in "1_Data_Cleanup_Consolidated". 
 
 ![XGboost_feature_importance_2](https://user-images.githubusercontent.com/98629542/164115523-5d2aa5ac-a3b0-404d-9111-adbcbceeccc1.png)
+
+
+
+**Error Analysis** 
+
+Focusing on Sensitivity, we will be looking at the False negatives. 
+- Plotted the proportion of False negatives (FN/Total WNV) against each week 
+- Found that there is higher proportion of FN at the start and end of the WNV outbreak across the weeks in all years 
+
+![image](https://user-images.githubusercontent.com/98629542/164117155-8128f4b2-4869-459e-9a02-4939f45cda63.png)
 
 
 ## Cost Benefit Analysis
