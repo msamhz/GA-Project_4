@@ -49,7 +49,7 @@ Since the EDA shows that there might be deep interaction effects affecting the p
 
 These are the models we have used to find the best balance between sensitivity and specificity, not having huge trade off for Accuracy, ROC_AUC and Precision. XGBoost was chosen as the final model, achieving the best sensivity score, while maintaining superior scores for the rest of the matrix.
 
-![image](https://user-images.githubusercontent.com/98629542/163920379-40d5f6ba-0b5f-4c61-987c-b4de8638d88e.png)
+![image](https://user-images.githubusercontent.com/98629542/164115280-4c040185-7d3d-4e23-8903-7969ce490d40.png)
 
 The barplot below shows the feature importance from XGBoost, which calculates the 'gain', the relative contribution of the corresponding feature to the model calculated by taking each feature's contribution for each tree in the model. The higher value of this metric, when compared to another feature implies it is more important for generating a prediction. 
 
@@ -57,7 +57,7 @@ There are some traps that are rated higher importance than the rest, which corre
 
 An interesting feature that was highlighted was the week 29 and 30, which was highlighted as the highest amongst the rest of the weeks. Based on our initial EDA, we can see that these two weeks were seeing a start of wnv influx across all the years as shown in "1_Data_Cleanup_Consolidated". 
 
-![XGboost_feature_importance](https://user-images.githubusercontent.com/98629542/163949682-8f0afb6c-db6c-4e74-a726-09e79bfcbd73.png)
+![XGboost_feature_importance_2](https://user-images.githubusercontent.com/98629542/164115523-5d2aa5ac-a3b0-404d-9111-adbcbceeccc1.png)
 
 
 ## Cost Benefit Analysis
