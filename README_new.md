@@ -47,13 +47,17 @@ Since the EDA shows that there might be deep interaction effects affecting the p
 
 **Modelling and Tuning**
 
-These are the models we have used to find the best balance between sensitivity and specificity, not having huge trade off for Accuracy, ROC_AUC and Precision. XGBoost was chosen as the final model, achieving the best sensivity score, while maintaining high scores for the rest of the matrix. 
+These are the models we have used to find the best balance between sensitivity and specificity, not having huge trade off for Accuracy, ROC_AUC and Precision. XGBoost was chosen as the final model, achieving the best sensivity score, while maintaining superior scores for the rest of the matrix.
 
 ![image](https://user-images.githubusercontent.com/98629542/163920379-40d5f6ba-0b5f-4c61-987c-b4de8638d88e.png)
 
-The barplot below shows the key features from the Model. 
+The barplot below shows the feature importance from XGBoost, which calculates the 'gain', the relative contribution of the corresponding feature to the model calculated by taking each feature's contribution for each tree in the model. The higher value of this metric, when compared to another feature implies it is more important for generating a prediction. 
 
-![XGboost_feature_importance](https://user-images.githubusercontent.com/98629542/163920817-28a270b1-50b8-4c38-95dd-4b9ca1138c73.png)
+There are some traps that are rated higher importance than the rest, which correlates well with the total number of learnt wnv present mosquitos trapped in those areas. 
+
+An interesting feature that was highlighted was the week 29 and 30, which was highlighted as the highest amongst the rest of the weeks. Based on our initial EDA, we can see that these two weeks were seeing a start of wnv influx across all the years as shown in "1_Data_Cleanup_Consolidated". 
+
+![XGboost_feature_importance](https://user-images.githubusercontent.com/98629542/163949682-8f0afb6c-db6c-4e74-a726-09e79bfcbd73.png)
 
 
 ## Cost Benefit Analysis
