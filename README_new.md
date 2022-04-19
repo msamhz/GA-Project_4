@@ -49,6 +49,7 @@ Since the EDA shows that there might be deep interaction effects affecting the p
 
 These are the models we have used to find the best balance between sensitivity and specificity, not having huge trade off for Accuracy, ROC_AUC and Precision. 
 
+![image](https://user-images.githubusercontent.com/98629542/163920379-40d5f6ba-0b5f-4c61-987c-b4de8638d88e.png)
 
 ## Cost Benefit Analysis
 
