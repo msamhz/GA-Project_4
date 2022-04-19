@@ -46,7 +46,8 @@ Since the EDA shows that there might be deep interaction effects affecting the p
 ^(ie. Certain years(weather condidions) may have more Culex Pipiens in specific times of the year at specific locations which results in higher WNV present counts)
 
 **Modelling and Tuning**
-Perhaps have a table or image here with our table of results?
+
+These are the models we have used to find the best balance between sensitivity and specificity, not having huge trade off for Accuracy, ROC_AUC and Precision. 
 
 
 ## Cost Benefit Analysis
