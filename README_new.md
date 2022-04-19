@@ -47,9 +47,14 @@ Since the EDA shows that there might be deep interaction effects affecting the p
 
 **Modelling and Tuning**
 
-These are the models we have used to find the best balance between sensitivity and specificity, not having huge trade off for Accuracy, ROC_AUC and Precision. 
+These are the models we have used to find the best balance between sensitivity and specificity, not having huge trade off for Accuracy, ROC_AUC and Precision. XGBoost was chosen as the final model, achieving the best sensivity score, while maintaining high scores for the rest of the matrix. 
 
 ![image](https://user-images.githubusercontent.com/98629542/163920379-40d5f6ba-0b5f-4c61-987c-b4de8638d88e.png)
+
+The barplot below shows the key features from the Model. 
+
+![XGboost_feature_importance](https://user-images.githubusercontent.com/98629542/163920817-28a270b1-50b8-4c38-95dd-4b9ca1138c73.png)
+
 
 ## Cost Benefit Analysis
 
