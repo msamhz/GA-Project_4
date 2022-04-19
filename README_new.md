@@ -43,12 +43,12 @@ In favour of reducing human fatalities and the possiibility of an uncontained ou
 **Key Observatiions from Exploratory Data Analysis**
 1) The number of WNV present traps across years vary greatly. Within each year there appears to be a seasonal peak in WNV in August.
 
-`In **2007** and **2013**, we can see the similar trend.`
+`In 2007 and 2013 we can see the similar trend.`
 
 ![wnvpresent_trend_2007](https://user-images.githubusercontent.com/98629542/164116210-77635c05-e616-4909-858d-1083057d725e.png)
 ![wnvpresent_trend_2013](https://user-images.githubusercontent.com/98629542/164116272-df55c8ab-5fd9-430e-81ec-a78ad79b8e8c.png)
 
-`On the other hand, in **2009** and **2011**, we see different but similar trend as well`
+`On the other hand, in 2009 and 2011 we see different but similar trend as well`
 
 ![wnvpresent_trend_2009](https://user-images.githubusercontent.com/98629542/164116304-43c0a2a2-d7bd-47e7-b0c6-00ef47122346.png)
 ![wnvpresent_trend_2011](https://user-images.githubusercontent.com/98629542/164116310-09a9294c-f00f-4154-9440-540abdfbbd8a.png)
@@ -66,15 +66,13 @@ Since the EDA shows that there might be deep interaction effects affecting the p
 
 **Modelling and Tuning**
 
-These are the models we have used to find the best balance between sensitivity and specificity, not having huge trade off for Accuracy, ROC_AUC and Precision. XGBoost was chosen as the final model, achieving the best sensivity score, while maintaining superior scores for the rest of the matrix.
+These are the models we have used to find the best balance between sensitivity and specificity, not having huge trade off for Accuracy, ROC_AUC and Precision. `XGBoost` was chosen as the final model, **achieving the best sensivity score, while maintaining superior scores for the rest of the matrix**.
 
 ![image](https://user-images.githubusercontent.com/98629542/164115280-4c040185-7d3d-4e23-8903-7969ce490d40.png)
 
 The barplot below shows the feature importance from XGBoost, which calculates the 'gain', the relative contribution of the corresponding feature to the model calculated by taking each feature's contribution for each tree in the model. The higher value of this metric, when compared to another feature implies it is more important for generating a prediction. 
 
-There are some traps that are rated higher importance than the rest, which correlates well with the total number of learnt wnv present mosquitos trapped in those areas. 
-
-An interesting feature that was highlighted was the week 29 and 30, which was highlighted as the highest amongst the rest of the weeks. Based on our initial EDA, we can see that these two weeks were seeing a start of wnv influx across all the years as shown in "1_Data_Cleanup_Consolidated". 
+An interesting feature that was highlighted was the week 29 and 30, which was highlighted as the highest amongst the rest of the weeks. Based on our initial EDA, we can see that these two weeks were seeing a start of wnv influx across all the years as shown in "1_Data_Cleanup_Consolidated". This can be a strong signal for subsequent follow up actions needed which will be explained below.  
 
 ![XGboost_feature_importance_2](https://user-images.githubusercontent.com/98629542/164115523-5d2aa5ac-a3b0-404d-9111-adbcbceeccc1.png)
 
