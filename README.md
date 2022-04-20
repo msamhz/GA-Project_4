@@ -45,13 +45,15 @@ In favour of reducing human fatalities and the possiibility of an uncontained ou
 
 `In 2007 and 2013 we can see the similar trend.`
 
-![wnvpresent_trend_2007](https://user-images.githubusercontent.com/98629542/164116210-77635c05-e616-4909-858d-1083057d725e.png)
-![wnvpresent_trend_2013](https://user-images.githubusercontent.com/98629542/164116272-df55c8ab-5fd9-430e-81ec-a78ad79b8e8c.png)
+![wnvpresent_trend_2007](https://user-images.githubusercontent.com/98629542/164122669-e1f7d0f6-cbd7-47a1-bad5-f0ebcab3add7.png)
+![wnvpresent_trend_2013](https://user-images.githubusercontent.com/98629542/164122693-e148fc2e-054f-45c7-bf70-a8c2667d1295.png)
+
 
 `On the other hand, in 2009 and 2011 we see different but similar trend as well`
 
-![wnvpresent_trend_2009](https://user-images.githubusercontent.com/98629542/164116304-43c0a2a2-d7bd-47e7-b0c6-00ef47122346.png)
-![wnvpresent_trend_2011](https://user-images.githubusercontent.com/98629542/164116310-09a9294c-f00f-4154-9440-540abdfbbd8a.png)
+![wnvpresent_trend_2009](https://user-images.githubusercontent.com/98629542/164122685-aac0b469-651a-4db6-890e-5c0afdb2cbf7.png)
+![wnvpresent_trend_2011](https://user-images.githubusercontent.com/98629542/164122689-cfbeeeeb-2b1a-46b2-affa-610fa0b599a4.png)
+
 
 
 3) Referring to the trend for 2007 and 2013, Culex Pipiens are much more likely to carry the West Nile Virus. As such, a high number of WNV present traps correlate with a high number of Culex Pipiens.
