@@ -18,6 +18,10 @@ In favour of reducing human fatalities and the possiibility of an uncontained ou
 ## Method
 **1) Data Cleaning and Exploratory Data Analysis**
 - Understand the data in the train, test, spray and weather datasets
+- Weather datasets were split by two weather stations, hence we calculated the euclidian distance between weather stations and traps and attributed the weather conditions to it as shown below. 
+
+![Nearest Traps around weather stations](https://user-images.githubusercontent.com/98629542/164117440-f4c92dfa-b0b7-4ecf-a9e0-dbbbdbaa4779.png)
+
 - Perform data cleaning and extract essential features for further analysis
 - Plot distributions locations of WNV across the years
 - Merge required data for subsequent analysis 
@@ -38,8 +42,23 @@ In favour of reducing human fatalities and the possiibility of an uncontained ou
 ## Results
 **Key Observatiions from Exploratory Data Analysis**
 1) The number of WNV present traps across years vary greatly. Within each year there appears to be a seasonal peak in WNV in August.
-2) Culex Pipiens are much more likely to carry the West Nile Virus. As such, a high number of WNV present traps correlate with a high number of Culex Pipiens.
-3) There are traps which are hotspots across years, and traps which are hotspots within years or a subset of years.
+
+`In 2007 and 2013 we can see the similar trend.`
+
+![wnvpresent_trend_2007](https://user-images.githubusercontent.com/98629542/164116210-77635c05-e616-4909-858d-1083057d725e.png)
+![wnvpresent_trend_2013](https://user-images.githubusercontent.com/98629542/164116272-df55c8ab-5fd9-430e-81ec-a78ad79b8e8c.png)
+
+`On the other hand, in 2009 and 2011 we see different but similar trend as well`
+
+![wnvpresent_trend_2009](https://user-images.githubusercontent.com/98629542/164116304-43c0a2a2-d7bd-47e7-b0c6-00ef47122346.png)
+![wnvpresent_trend_2011](https://user-images.githubusercontent.com/98629542/164116310-09a9294c-f00f-4154-9440-540abdfbbd8a.png)
+
+
+3) Referring to the trend for 2007 and 2013, Culex Pipiens are much more likely to carry the West Nile Virus. As such, a high number of WNV present traps correlate with a high number of Culex Pipiens.
+4) There are traps which are hotspots across years, and traps which are hotspots within years or a subset of years.
+
+![image](https://user-images.githubusercontent.com/98629542/164116803-190eba85-9356-4f10-8c73-653916153052.png)
+
 
 Since the EDA shows that there might be deep interaction effects affecting the presence of WNV at a location^, we expect models which account for interaction effects as part of their algorithm(e.g. Random Forest and XGBoost) to perform better than a model such as Logistic Regression which does not explicitly account for such interactions.
 
@@ -47,17 +66,25 @@ Since the EDA shows that there might be deep interaction effects affecting the p
 
 **Modelling and Tuning**
 
-These are the models we have used to find the best balance between sensitivity and specificity, not having huge trade off for Accuracy, ROC_AUC and Precision. XGBoost was chosen as the final model, achieving the best sensivity score, while maintaining superior scores for the rest of the matrix.
+These are the models we have used to find the best balance between sensitivity and specificity, not having huge trade off for Accuracy, ROC_AUC and Precision. `XGBoost` was chosen as the final model, **achieving the best sensivity score, while maintaining superior scores for the rest of the matrix**.
 
-![image](https://user-images.githubusercontent.com/98629542/163920379-40d5f6ba-0b5f-4c61-987c-b4de8638d88e.png)
+![image](https://user-images.githubusercontent.com/98629542/164115280-4c040185-7d3d-4e23-8903-7969ce490d40.png)
 
 The barplot below shows the feature importance from XGBoost, which calculates the 'gain', the relative contribution of the corresponding feature to the model calculated by taking each feature's contribution for each tree in the model. The higher value of this metric, when compared to another feature implies it is more important for generating a prediction. 
 
-There are some traps that are rated higher importance than the rest, which correlates well with the total number of learnt wnv present mosquitos trapped in those areas. 
+An interesting feature that was highlighted was the week 29 and 30, which was highlighted as the highest amongst the rest of the weeks. Based on our initial EDA, we can see that these two weeks were seeing a start of wnv influx across all the years as shown in "1_Data_Cleanup_Consolidated". This can be a strong signal for subsequent follow up actions needed which will be explained below.  
 
-An interesting feature that was highlighted was the week 29 and 30, which was highlighted as the highest amongst the rest of the weeks. Based on our initial EDA, we can see that these two weeks were seeing a start of wnv influx across all the years as shown in "1_Data_Cleanup_Consolidated". 
+![XGboost_feature_importance_2](https://user-images.githubusercontent.com/98629542/164115523-5d2aa5ac-a3b0-404d-9111-adbcbceeccc1.png)
 
-![XGboost_feature_importance](https://user-images.githubusercontent.com/98629542/163949682-8f0afb6c-db6c-4e74-a726-09e79bfcbd73.png)
+
+
+**Error Analysis** 
+
+Focusing on Sensitivity, we will be looking at the False negatives. 
+- Plotted the proportion of False negatives (FN/Total WNV) against each week 
+- Found that there is higher proportion of FN at the start and end of the WNV outbreak across the weeks in all years 
+
+![image](https://user-images.githubusercontent.com/98629542/164117155-8128f4b2-4869-459e-9a02-4939f45cda63.png)
 
 
 ## Cost Benefit Analysis
