@@ -42,6 +42,7 @@ In favour of reducing human fatalities and the possiibility of an uncontained ou
 ## Results
 **Key Observatiions from Exploratory Data Analysis**
 1) The number of WNV present traps across years vary greatly. Within each year there appears to be a seasonal peak in WNV in August.
+2) Referring to the trend for 2007 and 2013, Culex Pipiens are much more likely to carry the West Nile Virus. As such, a high number of WNV present traps correlate with a high number of Culex Pipiens.
 
 `In 2007 and 2013 we can see the similar trend.`
 
@@ -54,10 +55,7 @@ In favour of reducing human fatalities and the possiibility of an uncontained ou
 ![wnvpresent_trend_2009](https://user-images.githubusercontent.com/98629542/164122685-aac0b469-651a-4db6-890e-5c0afdb2cbf7.png)
 ![wnvpresent_trend_2011](https://user-images.githubusercontent.com/98629542/164122689-cfbeeeeb-2b1a-46b2-affa-610fa0b599a4.png)
 
-
-
-3) Referring to the trend for 2007 and 2013, Culex Pipiens are much more likely to carry the West Nile Virus. As such, a high number of WNV present traps correlate with a high number of Culex Pipiens.
-4) There are traps which are hotspots across years, and traps which are hotspots within years or a subset of years.
+3) There are traps which are hotspots across years, and traps which are hotspots within years or a subset of years.
 
 ![image](https://user-images.githubusercontent.com/98629542/164116803-190eba85-9356-4f10-8c73-653916153052.png)
 
