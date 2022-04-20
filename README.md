@@ -14,7 +14,6 @@ This will help the City of Chicago and the Chicago Department of Public Health (
 **Goal:**
 In favour of reducing human fatalities and the possiibility of an uncontained outbreak, the team will focus on minimising false negatives over false positives. This would mean placing greater emphasise on `sensitivity` rather than `specificity` without sacrificing too much on `Accuracy`. We will also observe the `Precision` of the model to understand the quality of a positive prediction made by the model (ie. the increase in false positives for additional true positives).
 
---
 
 ## Method
 **1) Data Cleaning and Exploratory Data Analysis**
@@ -39,7 +38,6 @@ In favour of reducing human fatalities and the possiibility of an uncontained ou
 **4) Cost Benefit Analysis**
 - Understand the implications of the model chosen in terms of financial and public health costs
 
---
 
 ## Results
 **Key Observatiions from Exploratory Data Analysis**
@@ -62,14 +60,14 @@ In favour of reducing human fatalities and the possiibility of an uncontained ou
 ![image](https://user-images.githubusercontent.com/98629542/164116803-190eba85-9356-4f10-8c73-653916153052.png)
 
 
---
+
 
 Since the EDA shows that there might be deep interaction effects affecting the presence of WNV at a location^, we expect models which account for interaction effects as part of their algorithm(e.g. Random Forest and XGBoost) to perform better than a model such as Logistic Regression which does not explicitly account for such interactions.
 
 ^(ie. Certain years(weather condidions) may have more Culex Pipiens in specific times of the year at specific locations which results in higher WNV present counts)
 
 
---
+
 **Modelling and Tuning**
 
 These are the models we have used to find the best balance between sensitivity and specificity, not having huge trade off for Accuracy, ROC_AUC and Precision. `XGBoost` was chosen as the final model, **achieving the best sensivity score, while maintaining superior scores for the rest of the matrix**.
